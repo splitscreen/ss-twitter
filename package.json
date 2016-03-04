@@ -1,0 +1,43 @@
+{
+  "name": "ss-twitter",
+  "version": "0.0.0",
+  "description": "A NodeCG bundle to display Tweets",
+  "homepage": "http://splitscreenshow.com/open-source/",
+  "author": {
+    "name": "David Thomas",
+    "email": "guy@synth3.tk",
+    "url": "http://synth3.tk"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "nodecg",
+    "nodecg-bundle",
+    "twitter"
+  ],
+  "nodecg": {
+    "compatibleRange": "~0.7.0",
+    "dashboardPanels": [
+      {
+        "name": "ss-twitter",
+        "title": "Twitter",
+        "width": 4,
+        "file": "ss-twitter.html",
+        "headerColor": "#55acee"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1280,
+        "height": 720
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "MIT"
+}
