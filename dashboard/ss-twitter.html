@@ -2,8 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-
+  <div style="display: flex;">
+    <div class="column">
+      <h4 style="margin-top: 0px;">Preview</h4>
+      <div class="js-preview">
+        <div class="input-group"><span class="input-group-addon">URL</span>
+          <input type="text" placeholder="URL" class="js-url form-control"/>
+        </div>
+      </div>
+      <button type="button" command="take" style="margin-top: 8px;" class="btn btn-lg btn-info">Take</button>
+    </div>
+    <div class="column">
+      <h4 style="margin-top: 0px;">Program</h4>
+      <div class="js-program">
+        <div class="input-group"><span class="input-group-addon">ID</span>
+          <input type="text" placeholder="ID" disabled="disabled" class="js-id form-control"/>
+        </div>
+        <div class="ncg-label">Content</div>
+        <textarea style="width: 100%; margin-bottom: 8px; height: 80px;" disabled="disabled" class="js-content form-control"></textarea>
+      </div>
+      <div class="ncg-btn-group">
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <button type="button" command="show" class="btn btn-xs btn-success">Show</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" command="hide" class="btn btn-xs btn-danger">Hide</button>
+          </div>
+        </div>
+        <div class="btn-group btn-group-justified no-padding">
+          <div class="btn-group">
+            <button type="button" command="pulse" data-duration='7' class="btn btn-xs btn-primary">7s</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" command="pulse" data-duration='15' class="btn btn-xs btn-primary">15s</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" command="pulse" data-duration='30' class="btn btn-xs btn-primary">30s</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="ss-twitter.js"></script>
 </body>
 </html>

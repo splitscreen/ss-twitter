@@ -1,0 +1,9 @@
+body { margin: 0; opacity: 0;}
+
+#container {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
