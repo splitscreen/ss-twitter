@@ -2,6 +2,12 @@
   "name": "ss-twitter",
   "version": "0.0.0",
   "description": "A NodeCG bundle to display Tweets",
+  "dependencies": {
+    "numeral": "^1.5.3",
+    "q": "^1.4.1",
+    "request": "^2.61.0",
+    "twitter": "^1.2.5"
+  },
   "homepage": "http://splitscreenshow.com/open-source/",
   "author": {
     "name": "David Thomas",
