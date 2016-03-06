@@ -3,6 +3,12 @@ A standalone, 0.7.0-compatible version of the Twitter graphic from [toth3-overla
 
 This is a [NodeCG](http://github.com/nodecg/nodecg) bundle. It cannot be run on its own, it has to be run as part of an existing NodeCG installation. Please see NodeCG's documentation for installation and setup instructions before continuing with toth3-overlay setup.
 
+## Demo
+
+![Demo image](demo.gif)
+
+[YouTube demo with sound effects](https://www.youtube.com/watch?v=_y1cdy95Emk)
+
 ## Installation
 1. Install NodeCG (don't forget to run `npm install` from your the root of your NodeCG installation directory after you have installed it! This is what installs all of NodeCG's dependencies, which are required.)
 2. Clone ss-twitter to `nodecg/bundles/ss-twitter`
