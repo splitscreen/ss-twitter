@@ -38,10 +38,10 @@ For sounds to play, you must also put the following code into `nodecg/cfg/lfg-so
 ```
 {
   "soundNames":[
-    "image_in",
-    "image_out",
-    "tweet_in",
-    "tweet_out"
+    "ss-twitter-image_in",
+    "ss-twitter-image_out",
+    "ss-twitter-tweet_in",
+    "ss-twitter-tweet_out"
   ]
 }
 ```

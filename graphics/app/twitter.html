@@ -182,13 +182,13 @@ document.addEventListener('DOMContentLoaded', function () {
          */
         show: function() {
             var self = this;
-            window.lfgSound.play('tweet_in');
+            window.lfgSound.play('ss-twitter-tweet_in');
 
             this.tl.to(this.$.line, 0.8, {width: '100%', ease: Power3.easeInOut});
             this.tl.to(this.$.tweetBody, 0.5, {
                 onStart: function() {
                     if (self.images.length > 0) {
-                        var imageIn = window.lfgSound.play('image_in');
+                        var imageIn = window.lfgSound.play('ss-twitter-image_in');
                     }
                 },
                 y: '0%',
@@ -198,10 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         hide: function() {
-            window.lfgSound.play('tweet_out');
+            window.lfgSound.play('ss-twitter-tweet_out');
 
             if (this.images.length > 0) {
-                var imageOut = window.lfgSound.play('image_out');
+                var imageOut = window.lfgSound.play('ss-twitter-image_out');
             }
 
             this.tl.to(this.$.image, 1, {y: '100%', ease: Power3.easeInt});
