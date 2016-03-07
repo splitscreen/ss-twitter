@@ -11,11 +11,18 @@ This is a [NodeCG](http://github.com/nodecg/nodecg) bundle. It cannot be run on 
 
 ## Installation
 1. Install NodeCG (don't forget to run `npm install` from your the root of your NodeCG installation directory after you have installed it! This is what installs all of NodeCG's dependencies, which are required.)
+
 2. Clone ss-twitter to `nodecg/bundles/ss-twitter`
-3. Create `nodecg/cfg/ss-twitter.json`. This is the config file.
+
+3. Install lfg-sounds (required).
+  ```sh
+  nodecg install "supportclass/lfg-sounds#~0.1.1"
+  ```
+
+4. Create `nodecg/cfg/ss-twitter.json` and `nodecg/cfg/lfg-sounds.json`. These are the necessary config files.
 
 ## Configuration
-The config lives at `nodecg/cfg/ss-twitter.json` and is required for the graphic to work.
+The bundle's config lives at `nodecg/cfg/ss-twitter.json` and is required for the graphic to work.
 
 If you don't have Twitter credentials, you must make them before attempting to use this. Check the developer site for more info on how to register.
 ```
@@ -24,6 +31,18 @@ If you don't have Twitter credentials, you must make them before attempting to u
   "consumerSecret": "yourConsumerSecret",
   "accessTokenKey": "yourAccessTokenKey",
   "accessTokenSecret": "yourAccessTokenSecret"
+}
+```
+
+For sounds to play, you must also put the following code into `nodecg/cfg/lfg-sounds.json`.
+```
+{
+  "soundNames":[
+    "image_in",
+    "image_out",
+    "tweet_in",
+    "tweet_out"
+  ]
 }
 ```
 
