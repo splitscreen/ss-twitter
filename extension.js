@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function (nodecg) {
-  console.log('we in here');
   if (!nodecg.bundleConfig) {
       nodecg.log.error('cfg/ss-twitter.json was not found. ' +
           'This file is where the Twitter API keys are set. ' +
