@@ -1,5 +1,6 @@
 <link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/iron-image/iron-image.html">
+<link rel="import" href="/lfg-sounds/player">
 
 <dom-module id="ss-tweet">
     <style>
@@ -120,11 +121,6 @@
 // Wait until the page is fully loaded, because some of our handlers in here
 // rely on GSAP being loaded.
 document.addEventListener('DOMContentLoaded', function () {
-
-    createjs.Sound.registerSound('snd/tweet_in.ogg', 'tweet_in');
-    createjs.Sound.registerSound('snd/tweet_out.ogg', 'tweet_out');
-    createjs.Sound.registerSound('snd/image_in.ogg', 'image_in');
-    createjs.Sound.registerSound('snd/image_out.ogg', 'image_out');
     
     Polymer({
         is: 'ss-tweet',
@@ -186,15 +182,13 @@ document.addEventListener('DOMContentLoaded', function () {
          */
         show: function() {
             var self = this;
-            createjs.Sound.play('tweet_in').pan = 0.000001;
+            window.lfgSound.play('ss-twitter-tweet_in');
 
             this.tl.to(this.$.line, 0.8, {width: '100%', ease: Power3.easeInOut});
             this.tl.to(this.$.tweetBody, 0.5, {
                 onStart: function() {
                     if (self.images.length > 0) {
-                        var imageIn = createjs.Sound.play('image_in');
-                        imageIn.pan = 0.000001;
-                        imageIn.volume = 0.75;
+                        var imageIn = window.lfgSound.play('ss-twitter-image_in');
                     }
                 },
                 y: '0%',
@@ -204,12 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         hide: function() {
-            createjs.Sound.play('tweet_out').pan = 0.000001;
+            window.lfgSound.play('ss-twitter-tweet_out');
 
             if (this.images.length > 0) {
-                var imageOut = createjs.Sound.play('image_out');
-                imageOut.pan = 0.000001;
-                imageOut.volume = 0.75;
+                var imageOut = window.lfgSound.play('ss-twitter-image_out');
             }
 
             this.tl.to(this.$.image, 1, {y: '100%', ease: Power3.easeInt});
